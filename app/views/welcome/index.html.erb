@@ -1,0 +1,26 @@
+<div class="slot">
+      <div class="container-home">
+            <div class="top">
+                  <div class="welcome-body">
+                        <div class="content-text">
+                        <h1>Welcome!</h1>
+                        <h2>Welcome to Boho Beauty - a light weight app with clean design and a feminine flair to give you the warm and fuzzies. </h2>
+                        </div>
+                        <div class="welcome-image">
+                              <%= image_tag("theneumama.png") %>
+                        </div>
+                  </div>
+            </div>
+            <div class="middle" id="faqs">
+                  <div class="faqs-body">
+                        <h2>Frequently Asked Questions</h2>
+                  <% @faqs.each do |faq| %>
+                    <div>
+                      <h3 class="faq"><a id="<%=faq.id%>"><%= faq.question %></a></h3>
+                      <p id="faq<%=faq.id%>" class="faq-answer"><%= faq.answer %></p>
+                    </div>
+                  <% end %>
+                  </div>
+            </div>
+      </div>
+</div>

@@ -1,0 +1,282 @@
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px; }
+
+body, p, ol, ul, td {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+ h1 {
+       line-height: 28px;
+ }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000; }
+
+a:hover {
+  color: RGB(244, 156, 196);
+}
+
+th {
+  padding-bottom: 5px; }
+
+td {
+  padding: 0 5px 7px; }
+
+div.field,
+div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff; }
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square; }
+
+label {
+  display: block; }
+
+// ******************* //
+//   CUSTOMIZATIONS   //
+// ******************* //
+
+// GLOBAL ELEMENTS //
+
+// .navbar {
+//       &.login-links {
+//             // display: flex;
+//             // justify-content: flex-end;
+//             .navbar-link {
+//
+//                   text-decoration: none;
+//             }
+//       }
+// }
+
+.login {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      flex-flow: column wrap;
+      justify-content: center;
+      margin: 0 auto;
+      padding-top: 100px;
+      .container {
+            padding: 50px;
+            border: 1px solid RGB(244, 156, 196);
+            box-shadow: rgba(62, 62, 62, 0.15) 0px 4px 40px 0px;
+
+            h2 {
+                  margin-bottom: 40px;
+            }
+      }
+}
+
+.button {
+      display: flex;
+      text-align: center;
+      a {
+            text-decoration: none;
+            padding: 4px 10px;
+            width: 100px;
+            border: 1px solid black;
+            // border-radius: 5px;
+            &:hover {
+                  color: white;
+                  background: RGB(244, 156, 196);
+                  border: 1px solid RGB(244, 156, 196);
+            }
+      }
+}
+
+.container {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 20px;
+}
+
+// ADMIN FAQS PAGE + EDIT //
+.admin-content {
+       margin: 0 auto;
+       .faq-top {
+             display: flex;
+             align-items: center;
+             h1 {
+                   margin-left: 20px;
+             }
+             .button {
+                   // display: flex;
+                   margin-left: 40px;
+                   width: 200px;
+                   // text-align: center;
+                   a {
+                  }
+             }
+       }
+       .content-body {
+             box-shadow: rgba(62, 62, 62, 0.15) 0px 4px 40px 0px;
+             padding: 20px;
+             margin-bottom: 20px;
+             .question {
+                   h3 {
+                        margin-top: 0;
+                  }
+
+            }
+            .action-buttons {
+                  display: flex;
+                  flex-flow: row nowrap;
+                  .button {
+                        width: 150px;
+                        margin-right: 20px;
+                        a {
+                              width: 100%;
+                        }
+                  }
+            }
+       }
+}
+
+.form {
+      width: 100%;
+      label {
+            padding-left: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+      }
+      textarea {
+            width: 100%;
+            height: 25vh;
+            border: none;
+            box-shadow: rgba(62, 62, 62, 0.15) 0px 4px 40px 0px;
+            padding: 20px;
+            font: 400 16px/20px Arial;
+      }
+      .field {
+            margin-bottom: 30px;
+      }
+}
+
+// INDEX - PUBLIC FAQS PAGE //
+.top {
+      height: 100vh;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      .welcome-body {
+            display: flex;
+            flex-flow: row wrap;
+            box-shadow: rgba(62, 62, 62, 0.15) 0px 4px 40px 0px;
+            padding: 50px 20px;
+            margin: 50px;
+            .content-text {
+                  padding: 40px;
+                  display: flex;
+                  flex-flow: column wrap;
+                  width: calc(50% - 80px);
+                  justify-content: center;
+                  h2 {
+                        line-height: 22px;
+                        font-weight: 400;
+                        font-style: italic;
+                  }
+            }
+            .welcome-image {
+                  width: calc(50% - 60px);
+                  padding: 30px;
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  img {
+                        width: 75%;
+                        object-fit: contain;
+                        box-shadow: rgba(62, 62, 62, 0.15) 0px 4px 40px 0px;
+
+                  }
+            }
+      }
+}
+
+#faqs {
+      height: 100vh;
+      width: 100%;
+      margin: 50px auto;
+      display: flex;
+      justify-content: center;
+      .faqs-body {
+            box-shadow: rgba(62, 62, 62, 0.15) 0px 4px 40px 0px;
+            padding: 50px 20px;
+            margin: 75px 50px 50px;
+      }
+}
+
+
+.navbar{
+      display:flex;
+      justify-content: flex-start;
+      position: fixed;
+      transform: rotate(270deg);
+      left: 48%;
+      border-left: 1px solid black;
+      padding-left: 10px;
+      .nav-link {
+            text-decoration: none;
+            color: RGB(244, 156, 196);
+            &:hover {
+                  border-bottom: 1px solid RGB(244, 156, 196);
+            }
+      }
+      &.admin {
+            transform: none;
+            left: 0;
+            position: relative;
+            border-left: none;
+            .admin-nav {
+                  display: flex;
+                  justify-content: space-between;
+                  width: 100%;
+                  margin: 0 auto;
+                  max-width: 1024px;
+                  .logged-in {
+                        display: inline;
+
+                  }
+                  .devise-action-links {
+                        display: flex;
+                        flex-flow: column wrap;
+                  }
+            }
+
+      }
+}

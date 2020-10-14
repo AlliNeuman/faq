@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WWW</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+        <div class="navbar <%if user_signed_in? %>admin<% end %>">
+             <% if user_signed_in? %>
+              <div class="admin-nav">
+                    <div class="nav-item">
+                        <a class="nav-link" href="/faqs">FAQs</a>
+                    </div>
+                    <div class="logged-in">
+                     Welcome, <strong><%= current_user.email %></strong>
+               </div>
+
+                     <div class="devise-action-links">
+                     <%= link_to 'Edit Account', edit_user_registration_path, :class => 'nav-link' %>
+                     <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-link'  %>
+                     <%= link_to "Create New User", new_user_registration_path, :class => 'nav-link'  %>
+                     </div>
+               </div>
+
+               <% else %>
+               <div class="public-nav">
+                     <div class="nav-item">
+                           <a class="nav-link" href="#faqs">FAQs</a>
+                     </div>
+                     <div class="login-link">
+                     <%= link_to "Login", new_user_session_path, :class => 'nav-link'  %>
+                     </div>
+              </div>
+              <% end %>
+        </div>
+        <% if notice %>
+          <p class="alert alert-success" id="success-fade"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger" id="danger-fade"><%= alert %></p>
+        <% end %>
+    <%= yield %>
+  </body>
+</html>

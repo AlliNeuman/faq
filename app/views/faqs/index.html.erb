@@ -1,0 +1,27 @@
+<div class="container">
+      <div class="slot">
+            <div class="admin-content">
+
+            <div class="faq-top">
+            <h1>Frequently Asked Questions </h1>
+            <span class="button"><%= link_to 'New Question', new_faq_path %></span>
+            </div>
+
+
+                <% @faqs.each do |faq| %>
+
+                <div class="content-body">
+                    <div class="question">
+                          <h3><%= faq.question %></h3>
+                          <p><%= faq.answer %></p>
+                    </div>
+                    <div class="action-buttons">
+                          <span class="button"><%= link_to 'Edit', edit_faq_path(faq) %></span>
+                          <span class="button"><%= link_to 'Delete', faq, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+                    </div>
+              </div>
+                <% end %>
+
+
+      </div>
+</div>
